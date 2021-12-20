@@ -1,0 +1,20 @@
+{
+  "name": "com.talus.taluskit",
+  "version": "1.0.6",
+  "displayName": "TalusKit",
+  "description": "Supplement for Talus Framework",
+  "unity": "2020.3",
+  "unityRelease": "9f1",
+  "dependencies": {},
+  "keywords": [
+    "taluskit",
+    "editor",
+    "utility",
+    "validation"
+  ],
+  "author": {
+    "name": "Talus Studio",
+    "email": "emrekovanci@talusstudio.com",
+    "url": "https://www.talusstudio.com"
+  }
+}
