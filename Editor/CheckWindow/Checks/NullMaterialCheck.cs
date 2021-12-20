@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 using UnityEngine;
 
@@ -69,6 +70,7 @@ namespace TalusKit.Editor.CheckWindow.Checks
                     if (serializedData.hasModifiedProperties)
                     {
                         serializedData.ApplyModifiedProperties();
+                        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
                     }
                 } break;
             }

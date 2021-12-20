@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 using UnityEngine;
 
@@ -76,10 +77,12 @@ namespace TalusKit.Editor.CheckWindow.Checks
             {
                 default:
                     (result.MainObject as GameObject).isStatic = true;
+                    EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
                     break;
 
                 case 1:
                     Object.DestroyImmediate(result.MainObject as GameObject);
+                    EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
                     break;
             }
         }
