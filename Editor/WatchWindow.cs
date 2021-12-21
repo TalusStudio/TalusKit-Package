@@ -12,7 +12,7 @@ using UnityEngine;
 
 using Object = UnityEngine.Object;
 
-namespace TalusFramework.Editor.Utility.TalusKit
+namespace TalusKit.Editor
 {
     internal class WatchWindow : OdinEditorWindow
     {
