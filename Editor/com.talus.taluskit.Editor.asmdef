@@ -1,7 +1,9 @@
 {
     "name": "com.talus.taluskit.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "com.talus.taluskit"
+    ],
     "includePlatforms": [
         "Editor"
     ],
