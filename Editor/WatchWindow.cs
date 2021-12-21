@@ -221,7 +221,7 @@ namespace TalusKit.Editor
             Repaint();
         }
 
-        [MenuItem("TalusKit/Watch Window %w")]
+        [MenuItem("TalusKit/Debugging/Watch Window %w")]
         public static void ShowMenu()
         {
             _instance = GetWindow<WatchWindow>();

@@ -69,7 +69,7 @@ namespace TalusKit.Editor
             EditorGUILayout.LabelField("Selection count: " + Selection.objects.Length);
         }
 
-        [MenuItem("TalusKit/Replace With Prefab %q", false, -1000)]
+        [MenuItem("TalusKit/Replace With Prefab %q", false, -999)]
         private static void CreateReplaceWithPrefab()
         {
             GetWindow<ReplaceWithPrefab>().titleContent = new GUIContent("Replace with Prefab");

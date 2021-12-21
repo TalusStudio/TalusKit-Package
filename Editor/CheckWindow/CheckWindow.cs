@@ -250,7 +250,7 @@ namespace TalusKit.Editor.CheckWindow
             }
         }
 
-        [MenuItem("TalusKit/Check and Resolve", priority = 99999)]
+        [MenuItem("TalusKit/Debugging/Check and Resolve", priority = 99999)]
         public static void OpenWindow()
         {
             GetWindow<CheckWindow>(false);
