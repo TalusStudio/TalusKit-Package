@@ -1,5 +1,7 @@
 # TalusKit Package
 
+- Utility tools from 3rd party scripts.
+
 # ❗ Requirements 
 - Unity 2020.3.9f1 
 
