@@ -8,7 +8,7 @@ using UnityEditor.Build.Reporting;
 using UnityEditor.iOS.Xcode;
 #endif
 
-namespace Editor.BuildUtility.TestFlight
+namespace TalusKit.Editor.BuildUtility.TestFlight
 {
     public class ExemptFromEncryption : IPostprocessBuildWithReport
     {
@@ -24,10 +24,10 @@ namespace Editor.BuildUtility.TestFlight
 #if UNITY_IOS
             string plistPath = report.summary.outputPath + "/Info.plist";
 
-            PlistDocument plist = new PlistDocument();
+            var plist = new PlistDocument();
             plist.ReadFromString(File.ReadAllText(plistPath));
 
-            PlistElementDict rootDict = plist.root;
+            var rootDict = plist.root;
             rootDict.SetBoolean("ITSAppUsesNonExemptEncryption", false);
 
             File.WriteAllText(plistPath, plist.WriteToString());

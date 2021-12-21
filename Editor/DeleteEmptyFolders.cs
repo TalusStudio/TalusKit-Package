@@ -5,7 +5,7 @@ using UnityEditor;
 
 using UnityEngine;
 
-namespace Editor
+namespace TalusKit.Editor
 {
     public static class DeleteEmptyFolders
     {

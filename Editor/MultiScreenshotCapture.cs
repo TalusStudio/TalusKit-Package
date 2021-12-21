@@ -9,7 +9,7 @@ using UnityEditor;
 
 using UnityEngine;
 
-namespace Editor
+namespace TalusKit.Editor
 {
     internal static class ReflectionExtensions
     {

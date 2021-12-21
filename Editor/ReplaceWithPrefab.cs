@@ -2,7 +2,7 @@ using UnityEditor;
 
 using UnityEngine;
 
-namespace Editor
+namespace TalusKit.Editor
 {
     public class ReplaceWithPrefab : EditorWindow
     {
