@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TalusKit.Editor.CheckWindow
 {
-    [AddComponentMenu("Ignored Check Results (Do not use directly)", 0)]
+    [AddComponentMenu("TalusKit/Ignored Check Results (Do not use directly)", 0)]
     public class IgnoredCheckResults : MonoBehaviour
     {
         [System.Serializable]
