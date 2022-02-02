@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace BgTools.Extensions
+namespace TalusKit.Editor.PlayerPrefsEditor.Extensions
 {
 
     public static class Extensions

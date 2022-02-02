@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace BgTools.Utils
+namespace TalusKit.Editor.PlayerPrefsEditor
 {
     public class Styles
     {

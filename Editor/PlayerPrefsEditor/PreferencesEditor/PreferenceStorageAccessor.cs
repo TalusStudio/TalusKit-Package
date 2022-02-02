@@ -14,7 +14,7 @@ using System.Xml;
 using System.Xml.Linq;
 #endif
 
-namespace BgTools.PlayerPrefsEditor
+namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 {
     public abstract class PreferanceStorageAccessor
     {

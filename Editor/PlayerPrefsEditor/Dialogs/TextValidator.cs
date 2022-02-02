@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace BgTools.Dialogs
+namespace TalusKit.Editor.PlayerPrefsEditor.Dialogs
 {
     public class TextValidator
     {

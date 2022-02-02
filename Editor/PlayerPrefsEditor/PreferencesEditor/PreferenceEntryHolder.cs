@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace BgTools.PlayerPrefsEditor
+namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 {
     [System.Serializable]
     public class PreferenceEntryHolder : ScriptableObject

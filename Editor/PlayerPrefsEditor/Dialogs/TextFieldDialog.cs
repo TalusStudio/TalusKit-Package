@@ -1,11 +1,12 @@
-﻿using BgTools.Extensions;
-using BgTools.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using TalusKit.Editor.PlayerPrefsEditor.Extensions;
+
 using UnityEditor;
 using UnityEngine;
 
-namespace BgTools.Dialogs
+namespace TalusKit.Editor.PlayerPrefsEditor.Dialogs
 {
     public class TextFieldDialog : EditorWindow
     {
@@ -111,11 +112,11 @@ namespace BgTools.Dialogs
 
             // set focus only if element exist
             try
-            { 
+            {
                 EditorGUI.FocusTextInControl(name+"_textInput");
             }
             catch (MissingReferenceException)
-            { } 
+            { }
 
             if (Event.current != null && Event.current.isKey)
             {

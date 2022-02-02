@@ -1,4 +1,4 @@
-﻿namespace BgTools.PlayerPrefsEditor
+﻿namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 {
     [System.Serializable]
     public class PreferenceEntry

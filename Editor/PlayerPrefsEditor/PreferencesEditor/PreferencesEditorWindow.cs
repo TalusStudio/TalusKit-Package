@@ -6,15 +6,15 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using BgTools.Utils;
-using BgTools.Dialogs;
+
+using TalusKit.Editor.PlayerPrefsEditor.Dialogs;
 
 #if (UNITY_EDITOR_LINUX || UNITY_EDITOR_OSX)
 using System.Text;
 using System.Globalization;
 #endif
 
-namespace BgTools.PlayerPrefsEditor
+namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 {
     public class PreferencesEditorWindow : EditorWindow
     {

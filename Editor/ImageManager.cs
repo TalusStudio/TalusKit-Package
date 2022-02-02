@@ -1,8 +1,7 @@
-﻿#if UNITY_EDITOR
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace BgTools.Utils
+namespace TalusKit.Editor
 {
     public class ImageManager
     {
@@ -30,7 +29,7 @@ namespace BgTools.Utils
             {
                 if (osLinuxIcon == null)
                 {
-                    osLinuxIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "os_linux_icon.png", typeof(Texture2D));
+                    osLinuxIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/os_linux_icon.png", typeof(Texture2D));
                 }
                 return osLinuxIcon;
             }
@@ -43,7 +42,7 @@ namespace BgTools.Utils
             {
                 if (osWinIcon == null)
                 {
-                    osWinIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "os_win_icon.png", typeof(Texture2D));
+                    osWinIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/os_win_icon.png", typeof(Texture2D));
                 }
                 return osWinIcon;
             }
@@ -56,7 +55,7 @@ namespace BgTools.Utils
             {
                 if (osMacIcon == null)
                 {
-                    osMacIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "os_mac_icon.png", typeof(Texture2D));
+                    osMacIcon = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/os_mac_icon.png", typeof(Texture2D));
                 }
                 return osMacIcon;
             }
@@ -84,7 +83,7 @@ namespace BgTools.Utils
             {
                 if (refresh == null)
                 {
-                    refresh = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "refresh.png", typeof(Texture2D));
+                    refresh = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/refresh.png", typeof(Texture2D));
                 }
                 return refresh;
             }
@@ -97,7 +96,7 @@ namespace BgTools.Utils
             {
                 if (trash == null)
                 {
-                    trash = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "trash.png", typeof(Texture2D));
+                    trash = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/trash.png", typeof(Texture2D));
                 }
                 return trash;
             }
@@ -110,7 +109,7 @@ namespace BgTools.Utils
             {
                 if(exclamation == null)
                 {
-                    exclamation = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "exclamation.png", typeof(Texture2D));
+                    exclamation = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/exclamation.png", typeof(Texture2D));
                 }
                 return exclamation;
             }
@@ -123,7 +122,7 @@ namespace BgTools.Utils
             {
                 if (info == null)
                 {
-                    info = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "info.png", typeof(Texture2D));
+                    info = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/info.png", typeof(Texture2D));
                 }
                 return info;
             }
@@ -136,7 +135,7 @@ namespace BgTools.Utils
             {
                 if(watching == null)
                 {
-                    watching = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "watching.png", typeof(Texture2D));
+                    watching = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/watching.png", typeof(Texture2D));
                 }
                 return watching;
             }
@@ -149,11 +148,10 @@ namespace BgTools.Utils
             {
                 if (notWatching == null)
                 {
-                    notWatching = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "not_watching.png", typeof(Texture2D));
+                    notWatching = (Texture2D)AssetDatabase.LoadAssetAtPath(GetAssetDir() + "/Resources/not_watching.png", typeof(Texture2D));
                 }
                 return notWatching;
             }
         }
     }
 }
-#endif

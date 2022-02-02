@@ -1,8 +1,8 @@
 ﻿/*
  * Thanks to gr0ss for the inspiration.
- * 
+ *
  * https://github.com/gr0ss/RegistryMonitor
- * 
+ *
  * 11/08/2019
  */
 
@@ -13,7 +13,7 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace BgTools.PlayerPrefsEditor
+namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 {
     public class RegistryMonitor : IDisposable
     {
