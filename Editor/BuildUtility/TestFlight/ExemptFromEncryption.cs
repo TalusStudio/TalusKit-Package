@@ -27,7 +27,7 @@ namespace TalusKit.Editor.BuildUtility.TestFlight
             var plist = new PlistDocument();
             plist.ReadFromString(File.ReadAllText(plistPath));
 
-            var rootDict = plist.root;
+            PlistElementDict rootDict = plist.root;
             rootDict.SetBoolean("ITSAppUsesNonExemptEncryption", false);
 
             File.WriteAllText(plistPath, plist.WriteToString());
