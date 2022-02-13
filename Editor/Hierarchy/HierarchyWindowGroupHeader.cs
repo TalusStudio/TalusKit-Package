@@ -11,16 +11,16 @@ namespace TalusKit.Editor.Hierarchy
     [InitializeOnLoad]
     public static class HierarchyWindowGroupHeader
     {
-        static readonly HierarchyWindowGroupHeaderSettings _Settings;
-        static readonly GUIStyle _Style;
+        private static readonly GUIStyle _Style;
+        private static readonly HierarchyWindowGroupHeaderSettings _Settings;
 
         static HierarchyWindowGroupHeader()
         {
-            _Settings = HierarchyWindowGroupHeaderSettings.Instance;
             _Style = new GUIStyle();
-            UpdateStyle();
-            _Settings.Changed.AddListener(UpdateStyle);
+            _Settings = new HierarchyWindowGroupHeaderSettings();
+            _Settings.onChanged.AddListener(UpdateStyle);
 
+            UpdateStyle();
             EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;
         }
 
