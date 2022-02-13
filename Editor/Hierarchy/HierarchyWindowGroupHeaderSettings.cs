@@ -8,8 +8,8 @@ namespace TalusKit.Editor.Hierarchy
     {
         public UnityEvent onChanged = new UnityEvent();
 
-        public string NameStartsWith = "---";
-        public string RemoveString = "-";
+        public string NameStartsWith = "#";
+        public string RemoveString = "#";
         public FontStyle FontStyle = FontStyle.Bold;
         public int FontSize = 14;
         public TextAnchor Alignment = TextAnchor.MiddleRight;
