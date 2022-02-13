@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace TalusKit.Editor.Hierarchy
 {
-    [CreateAssetMenu]
     public class HierarchyWindowGroupHeaderSettings : ScriptableObject
     {
         [HideInInspector]
@@ -21,11 +20,6 @@ namespace TalusKit.Editor.Hierarchy
 
         static HierarchyWindowGroupHeaderSettings _Instance;
         public static HierarchyWindowGroupHeaderSettings Instance => _Instance != null ? _Instance : _Instance = LoadAsset();
-
-        private void Awake()
-        {
-            Changed?.Invoke();
-        }
 
         private void OnValidate()
         {
