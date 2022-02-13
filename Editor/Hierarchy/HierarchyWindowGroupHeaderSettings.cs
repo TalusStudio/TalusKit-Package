@@ -14,6 +14,6 @@ namespace TalusKit.Editor.Hierarchy
         public int FontSize = 14;
         public TextAnchor Alignment = TextAnchor.MiddleRight;
         public Color TextColor = Color.white;
-        public Color BackgroundColor = Color.black;
+        public Color BackgroundColor = new Color(0f, 0.34f, 0.16f);
     }
 }
