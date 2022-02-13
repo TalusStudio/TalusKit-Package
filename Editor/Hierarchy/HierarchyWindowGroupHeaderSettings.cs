@@ -3,7 +3,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TalusKit.Editor.Hiearchy
+namespace TalusKit.Editor.Hierarchy
 {
     [CreateAssetMenu]
     public class HierarchyWindowGroupHeaderSettings : ScriptableObject
@@ -22,20 +22,20 @@ namespace TalusKit.Editor.Hiearchy
         static HierarchyWindowGroupHeaderSettings _Instance;
         public static HierarchyWindowGroupHeaderSettings Instance => _Instance != null ? _Instance : _Instance = LoadAsset();
 
+        private void Awake()
+        {
+            Changed?.Invoke();
+        }
+
         private void OnValidate()
         {
             Changed?.Invoke();
-
-            Debug.Log(GetAssetDir());
         }
 
         private static HierarchyWindowGroupHeaderSettings LoadAsset()
         {
-            var asset = (HierarchyWindowGroupHeaderSettings) AssetDatabase.LoadAssetAtPath(
-                GetAssetDir() +
-                "/Resources/HierarchyWindowGroupHeaderSettings.asset", typeof(HierarchyWindowGroupHeaderSettings)
-            );
-
+            string path = GetAssetDir() + "/Resources/Settings.asset";
+            var asset = (HierarchyWindowGroupHeaderSettings) AssetDatabase.LoadAssetAtPath(path, typeof(HierarchyWindowGroupHeaderSettings));
             return asset;
         }
 

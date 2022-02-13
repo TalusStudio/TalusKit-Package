@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace TalusKit.Editor.Hiearchy
+namespace TalusKit.Editor.Hierarchy
 {
     /// <summary>
     /// Hierarchy Window Group Header
