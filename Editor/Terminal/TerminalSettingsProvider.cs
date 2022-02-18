@@ -13,7 +13,7 @@ namespace KRT.UnityTerminalLauncher
         }
 
         public TerminalSettingsProvider()
-            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "ZSH" })
+            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "Zsh" })
         {
         }
 

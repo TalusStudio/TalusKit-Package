@@ -8,7 +8,7 @@ namespace KRT.UnityTerminalLauncher
 
         internal override Process Launch(string targetFolder)
         {
-            var processInfo = new ProcessStartInfo("zsh")
+            var processInfo = new ProcessStartInfo("/bin/zsh")
             {
                 WorkingDirectory = targetFolder,
             };
