@@ -10,15 +10,15 @@ namespace KRT.UnityTerminalLauncher
 
         internal override Process Launch(string targetFolder)
         {
-            var gitInstallPath = GetGitInstallPath();
-            var gitBash = Path.Combine(gitInstallPath, "git-bash.exe");
+            string gitInstallPath = GetGitInstallPath();
+            string gitBash = Path.Combine(gitInstallPath, "git-bash.exe");
             return Process.Start(gitBash, $"--cd=\"{targetFolder}\"");
         }
 
         private static string GetGitInstallPath()
         {
             const string key = "HKEY_LOCAL_MACHINE\\SOFTWARE\\GitForWindows";
-            var path = (string)Registry.GetValue(key, "InstallPath", "");
+            string path = (string)Registry.GetValue(key, "InstallPath", "");
             return path;
         }
     }

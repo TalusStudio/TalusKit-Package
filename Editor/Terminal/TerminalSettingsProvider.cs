@@ -24,10 +24,10 @@ namespace KRT.UnityTerminalLauncher
 
         public override void OnGUI(string searchContext)
         {
-            TerminalSettings.TerminalTypeInt = EditorGUILayout.Popup("Terminal", TerminalSettings.TerminalTypeInt, TerminalTypeLabels);
+            TerminalSettings.TerminalTypeInt = EditorGUILayout.Popup("Terminal", TerminalSettings.TerminalTypeInt, _TerminalTypeLabels);
         }
 
-        private readonly string[] TerminalTypeLabels = Enum.GetValues(typeof(TerminalType))
+        private readonly string[] _TerminalTypeLabels = Enum.GetValues(typeof(TerminalType))
             .Cast<TerminalType>()
             .OrderBy(t => (int)t)
             .Select(t =>

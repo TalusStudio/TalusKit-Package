@@ -7,34 +7,28 @@ namespace KRT.UnityTerminalLauncher
     {
         private static class EditorPrefsKeys
         {
-            private const string prefix = "KRT.UnityTerminalLauncher.";
-            internal const string TerminalType = prefix + "TerminalType";
+            private const string PREFIX = "KRT.UnityTerminalLauncher.";
+            internal const string TERMINAL_TYPE = PREFIX + "TerminalType";
         }
 
         internal static TerminalType TerminalType
         {
             get
             {
-                if (!EditorPrefs.HasKey(EditorPrefsKeys.TerminalType))
+                if (!EditorPrefs.HasKey(EditorPrefsKeys.TERMINAL_TYPE))
                 {
                     return TerminalType.Auto;
                 }
-                var value = EditorPrefs.GetInt(EditorPrefsKeys.TerminalType);
+                int value = EditorPrefs.GetInt(EditorPrefsKeys.TERMINAL_TYPE);
                 return (TerminalType)Enum.ToObject(typeof(TerminalType), value);
             }
-            set
-            {
-                EditorPrefs.SetInt(EditorPrefsKeys.TerminalType, (int)value);
-            }
+            set => EditorPrefs.SetInt(EditorPrefsKeys.TERMINAL_TYPE, (int)value);
         }
 
         internal static int TerminalTypeInt
         {
             get => (int)TerminalType;
-            set
-            {
-                TerminalType = (TerminalType)Enum.ToObject(typeof(TerminalType), value);
-            }
+            set => TerminalType = (TerminalType)Enum.ToObject(typeof(TerminalType), value);
         }
     }
 

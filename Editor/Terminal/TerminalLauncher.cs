@@ -19,12 +19,14 @@ namespace KRT.UnityTerminalLauncher
             if (File.Exists(fileName))
                 return Path.GetFullPath(fileName);
 
-            var values = Environment.GetEnvironmentVariable("PATH");
-            foreach (var path in values.Split(Path.PathSeparator))
+            string values = Environment.GetEnvironmentVariable("PATH");
+            foreach (string path in values.Split(Path.PathSeparator))
             {
-                var fullPath = Path.Combine(path, fileName);
+                string fullPath = Path.Combine(path, fileName);
                 if (File.Exists(fullPath))
+                {
                     return fullPath;
+                }
             }
             return null;
         }
