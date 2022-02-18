@@ -40,5 +40,6 @@ namespace KRT.UnityTerminalLauncher
         PowerShell,
         Cmd,
         GitBash,
+        Zsh
     }
 }

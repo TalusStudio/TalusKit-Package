@@ -13,7 +13,7 @@ namespace KRT.UnityTerminalLauncher
         }
 
         public TerminalSettingsProvider()
-            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell" })
+            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "ZSH" })
         {
         }
 
@@ -46,6 +46,8 @@ namespace KRT.UnityTerminalLauncher
                         return "Command Prompt";
                     case TerminalType.GitBash:
                         return "Git Bash";
+                    case TerminalType.Zsh:
+                        return "Zsh";
                     default:
                         throw new NotImplementedException($"Case for {t} is not implemented.");
                 }

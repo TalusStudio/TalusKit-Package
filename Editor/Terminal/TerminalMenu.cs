@@ -61,6 +61,8 @@ namespace KRT.UnityTerminalLauncher
                     return new CmdLauncher();
                 case TerminalType.GitBash:
                     return new GitBashLauncher();
+                case TerminalType.Zsh:
+                    return new ZshLauncher();
                 default:
                     throw new System.NotImplementedException($"Launcher for {terminalType} is not implemented.");
             }
