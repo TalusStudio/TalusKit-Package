@@ -4,7 +4,7 @@ using UnityEditor.Build.Reporting;
 
 using UnityEngine;
 
-namespace TalusKit.Editor.BuildUtility
+namespace TalusKit.Editor.iOS
 {
     public class IncrementBuildNumber : IPreprocessBuildWithReport
     {

@@ -8,7 +8,7 @@ using UnityEditor.Build.Reporting;
 using UnityEditor.iOS.Xcode;
 #endif
 
-namespace TalusKit.Editor.BuildUtility.TestFlight
+namespace TalusKit.Editor.iOS
 {
     public class ExemptFromEncryption : IPostprocessBuildWithReport
     {
