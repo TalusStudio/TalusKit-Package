@@ -8,11 +8,8 @@ namespace KRT.UnityTerminalLauncher
 
         internal override Process Launch(string targetFolder)
         {
-            UnityEngine.Debug.Log(targetFolder);
             string command = @"open -a Terminal " + targetFolder;
             command = command.Replace(@"\", "/");
-
-            UnityEngine.Debug.Log(command);
 
             var startInfo = new ProcessStartInfo()
             {
