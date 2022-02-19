@@ -8,12 +8,24 @@ namespace KRT.UnityTerminalLauncher
 
         internal override Process Launch(string targetFolder)
         {
-            var processInfo = new ProcessStartInfo("/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal")
+            UnityEngine.Debug.Log(targetFolder);
+            string command = @"open -a Terminal " + targetFolder;
+            command = command.Replace(@"\", "/");
+
+            UnityEngine.Debug.Log(command);
+
+            var startInfo = new ProcessStartInfo()
             {
-                WorkingDirectory = targetFolder,
+                FileName = "bash",
+                UseShellExecute = false,
+                RedirectStandardError = true,
+                RedirectStandardInput = true,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true,
+                Arguments = " -c \"" + command + " \""
             };
 
-            return Process.Start(processInfo);
+            return Process.Start(startInfo);
         }
     }
 }
