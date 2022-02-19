@@ -2,6 +2,7 @@
 
 namespace KRT.UnityTerminalLauncher
 {
+    // todo: rename
     class ZshLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal");
