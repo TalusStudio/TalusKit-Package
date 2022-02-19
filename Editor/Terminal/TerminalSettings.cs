@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEditor;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     static class TerminalSettings
     {
@@ -40,6 +40,6 @@ namespace KRT.UnityTerminalLauncher
         PowerShell,
         Cmd,
         GitBash,
-        Zsh
+        MacTerminal
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     class CmdLauncher : TerminalLauncher
     {

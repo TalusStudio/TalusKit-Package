@@ -2,7 +2,7 @@
 using System.IO;
 using System.Diagnostics;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     class GitBashLauncher: TerminalLauncher
     {

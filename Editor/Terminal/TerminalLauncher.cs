@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     abstract class TerminalLauncher
     {

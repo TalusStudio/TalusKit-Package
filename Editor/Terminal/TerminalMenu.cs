@@ -2,7 +2,7 @@
 using UnityEditor;
 using System.IO;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     static class TerminalMenu
     {
@@ -61,8 +61,8 @@ namespace KRT.UnityTerminalLauncher
                     return new CmdLauncher();
                 case TerminalType.GitBash:
                     return new GitBashLauncher();
-                case TerminalType.Zsh:
-                    return new ZshLauncher();
+                case TerminalType.MacTerminal:
+                    return new MacTerminalLauncher();
                 default:
                     throw new System.NotImplementedException($"Launcher for {terminalType} is not implemented.");
             }

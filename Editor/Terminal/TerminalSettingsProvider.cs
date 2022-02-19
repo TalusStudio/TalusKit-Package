@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
     class TerminalSettingsProvider : SettingsProvider
     {
@@ -13,7 +13,7 @@ namespace KRT.UnityTerminalLauncher
         }
 
         public TerminalSettingsProvider()
-            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "Zsh" })
+            : base("Preferences/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "MacTerminal" })
         {
         }
 
@@ -46,8 +46,8 @@ namespace KRT.UnityTerminalLauncher
                         return "Command Prompt";
                     case TerminalType.GitBash:
                         return "Git Bash";
-                    case TerminalType.Zsh:
-                        return "Zsh";
+                    case TerminalType.MacTerminal:
+                        return "MacTerminal";
                     default:
                         throw new NotImplementedException($"Case for {t} is not implemented.");
                 }

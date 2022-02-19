@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics;
 
-namespace KRT.UnityTerminalLauncher
+namespace TalusKit.Editor.Terminal
 {
-    // todo: rename
-    class ZshLauncher : TerminalLauncher
+    class MacTerminalLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal");
 
