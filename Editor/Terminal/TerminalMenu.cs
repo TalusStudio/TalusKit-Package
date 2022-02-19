@@ -6,7 +6,7 @@ namespace TalusKit.Editor.Terminal
 {
     static class TerminalMenu
     {
-        [MenuItem("Assets/Open Terminal Here")]
+        [MenuItem("Assets/Open Terminal Here %t")]
         private static void OpenTerminalHere()
         {
             string path = GetSelectedPathOrFallback();
