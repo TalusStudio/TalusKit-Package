@@ -10,6 +10,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+using TalusKit.Runtime.CheckWindow;
+
 using Object = UnityEngine.Object;
 
 namespace TalusKit.Editor.CheckWindow

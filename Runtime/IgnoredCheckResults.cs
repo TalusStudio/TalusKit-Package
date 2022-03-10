@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace TalusKit.Editor.CheckWindow
+namespace TalusKit.Runtime.CheckWindow
 {
     [AddComponentMenu("TalusKit/Ignored Check Results (Do not use directly)", 0)]
     public class IgnoredCheckResults : MonoBehaviour
