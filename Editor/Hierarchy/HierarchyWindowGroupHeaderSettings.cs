@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 namespace TalusKit.Editor.Hierarchy
 {
+    // todo: replace with settings provider.
     [System.Serializable]
     public class HierarchyWindowGroupHeaderSettings
     {
