@@ -63,7 +63,7 @@ namespace TalusKit.Editor.PlayerPrefsEditor.PreferencesEditor
 #elif UNITY_EDITOR_OSX
         private readonly char[] invalidFilenameChars = { '$', '%', '&', '\\', '/', ':', '<', '>', '|', '~' };
 #endif
-        [MenuItem("TalusKit/Debugging/PlayerPrefs Editor", false, 1)]
+        [MenuItem("TalusKit/Debugging/PlayerPrefs Editor", false, 499)]
         static void ShowWindow()
         {
             PreferencesEditorWindow window = EditorWindow.GetWindow<PreferencesEditorWindow>(false, "Prefs Editor");
