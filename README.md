@@ -2,9 +2,6 @@
 
 - Utility tools from 3rd party scripts.
 
-# ❗ Requirements 
-- Unity 2020.3.9f1 
-
 # 💿 Installation
 - Clone repository and extract it.
 - In Unity, 
