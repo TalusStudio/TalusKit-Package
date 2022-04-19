@@ -57,7 +57,7 @@ namespace TalusKit.Editor
 
 #region Create Instance
 
-        [MenuItem("TalusKit/Utility/EditorPhysics", priority = 495)]
+        [MenuItem("TalusKit/Utility/EditorPhysics", false, 201)]
         private static void CreateInstance()
         {
             CreateWindow<EditorPhysics>().Show();
