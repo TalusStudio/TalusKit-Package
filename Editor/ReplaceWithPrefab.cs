@@ -72,8 +72,9 @@ namespace TalusKit.Editor
         [MenuItem("TalusKit/Utility/Replace With Prefab %q", false, 202)]
         private static void CreateReplaceWithPrefab()
         {
-            GetWindow<ReplaceWithPrefab>().titleContent = new GUIContent("Replace with Prefab");
-            GetWindow<ReplaceWithPrefab>().Show();
+            var window = GetWindow<ReplaceWithPrefab>();
+            window.titleContent = new GUIContent("Replace with Prefab");
+            window.Show();
         }
     }
 }
