@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace TalusKit.Editor.Terminal
 {
-    class GitBashLauncher: TerminalLauncher
+    internal class GitBashLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => File.Exists(Path.Combine(GetGitInstallPath(), "git-bash.exe"));
 

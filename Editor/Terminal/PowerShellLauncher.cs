@@ -2,7 +2,7 @@
 
 namespace TalusKit.Editor.Terminal
 {
-    class PowerShellLauncher : TerminalLauncher
+    internal class PowerShellLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("PowerShell.exe");
 

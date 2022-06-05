@@ -2,7 +2,7 @@
 
 namespace TalusKit.Editor.Terminal
 {
-    class CmdLauncher : TerminalLauncher
+    internal class CmdLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("cmd.exe");
 

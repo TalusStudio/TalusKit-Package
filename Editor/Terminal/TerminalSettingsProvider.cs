@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TalusKit.Editor.Terminal
 {
-    class TerminalSettingsProvider : SettingsProvider
+    internal class TerminalSettingsProvider : SettingsProvider
     {
         [SettingsProvider]
         public static SettingsProvider CreateSettingsProvider()
@@ -38,8 +38,6 @@ namespace TalusKit.Editor.Terminal
                         return "Auto";
                     case TerminalType.WindowsTerminal:
                         return "Windows Terminal";
-                    case TerminalType.PowerShellCore:
-                        return "PowerShell Core";
                     case TerminalType.PowerShell:
                         return "PowerShell";
                     case TerminalType.Cmd:

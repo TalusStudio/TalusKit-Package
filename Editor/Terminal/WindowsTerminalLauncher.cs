@@ -2,7 +2,7 @@
 
 namespace TalusKit.Editor.Terminal
 {
-    class WindowsTerminalLauncher : TerminalLauncher
+    internal class WindowsTerminalLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("wt.exe");
 

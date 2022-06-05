@@ -4,7 +4,7 @@ using System.IO;
 
 namespace TalusKit.Editor.Terminal
 {
-    static class TerminalMenu
+    internal static class TerminalMenu
     {
         [MenuItem("Assets/Open Terminal Here %t")]
         private static void OpenTerminalHere()
@@ -53,8 +53,6 @@ namespace TalusKit.Editor.Terminal
                     throw new System.Exception("Suitable terminal not found in system.");
                 case TerminalType.WindowsTerminal:
                     return new WindowsTerminalLauncher();
-                case TerminalType.PowerShellCore:
-                    return new PowerShellCoreLauncher();
                 case TerminalType.PowerShell:
                     return new PowerShellLauncher();
                 case TerminalType.Cmd:

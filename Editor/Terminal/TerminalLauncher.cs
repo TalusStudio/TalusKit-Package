@@ -4,7 +4,7 @@ using System.IO;
 
 namespace TalusKit.Editor.Terminal
 {
-    abstract class TerminalLauncher
+    internal abstract class TerminalLauncher
     {
         internal abstract bool HasExecutable { get; }
         internal abstract Process Launch(string targetFolder);

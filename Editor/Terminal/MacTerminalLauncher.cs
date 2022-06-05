@@ -2,7 +2,7 @@
 
 namespace TalusKit.Editor.Terminal
 {
-    class MacTerminalLauncher : TerminalLauncher
+    internal class MacTerminalLauncher : TerminalLauncher
     {
         internal override bool HasExecutable => ExistsOnPath("/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal");
 

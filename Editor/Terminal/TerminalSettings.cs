@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace TalusKit.Editor.Terminal
 {
-    static class TerminalSettings
+    internal static class TerminalSettings
     {
         private static class EditorPrefsKeys
         {
@@ -36,7 +36,6 @@ namespace TalusKit.Editor.Terminal
     {
         Auto,
         WindowsTerminal,
-        PowerShellCore,
         PowerShell,
         Cmd,
         GitBash,
