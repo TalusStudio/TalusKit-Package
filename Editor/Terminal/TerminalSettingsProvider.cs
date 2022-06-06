@@ -12,10 +12,8 @@ namespace TalusKit.Editor.Terminal
             return new TerminalSettingsProvider();
         }
 
-        public TerminalSettingsProvider()
-            : base("Preferences/Talus/Terminal Launcher", SettingsScope.User, new[] { "Terminal", "PowerShell", "MacTerminal" })
-        {
-        }
+        public TerminalSettingsProvider() : base("Talus Studio/Terminal Launcher", SettingsScope.Project)
+        { }
 
         public override bool HasSearchInterest(string searchContext)
         {
