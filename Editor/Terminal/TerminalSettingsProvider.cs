@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using System;
 using System.Linq;
+using UnityEngine;
 
 namespace TalusKit.Editor.Terminal
 {
@@ -12,7 +13,7 @@ namespace TalusKit.Editor.Terminal
             return new TerminalSettingsProvider();
         }
 
-        public TerminalSettingsProvider() : base("Talus Studio/Terminal Launcher", SettingsScope.Project)
+        public TerminalSettingsProvider() : base("Talus Studio/Terminal Launcher", SettingsScope.User)
         { }
 
         public override bool HasSearchInterest(string searchContext)
@@ -22,6 +23,8 @@ namespace TalusKit.Editor.Terminal
 
         public override void OnGUI(string searchContext)
         {
+            GUILayout.Space(8);
+
             TerminalSettings.TerminalTypeInt = EditorGUILayout.Popup("Terminal", TerminalSettings.TerminalTypeInt, _TerminalTypeLabels);
         }
 
