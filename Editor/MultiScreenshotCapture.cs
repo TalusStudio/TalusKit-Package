@@ -106,7 +106,7 @@ namespace TalusKit.Editor
 
         private readonly List<CustomResolution> queuedScreenshots = new List<CustomResolution>();
         private bool allowTransparentBackground;
-        private bool captureOverlayUI;
+        private bool captureOverlayUI = true;
         private bool currentResolutionEnabled = true;
         private float prevTimeScale;
         private float resolutionMultiplier = 1f;
@@ -290,7 +290,9 @@ namespace TalusKit.Editor
 
             GUI.enabled = queuedScreenshots.Count == 0 && resolutionMultiplier > 0f;
 
-            if (GUILayout.Button("Capture Screenshots"))
+            GUILayout.FlexibleSpace();
+            GUI.backgroundColor = Color.green;
+            if (GUILayout.Button("Capture Screenshots", GUILayout.MinHeight(50)))
             {
                 if (string.IsNullOrEmpty(saveDirectory))
                 {
@@ -338,7 +340,7 @@ namespace TalusKit.Editor
         {
             MultiScreenshotCapture window = GetWindow<MultiScreenshotCapture>();
             window.titleContent = new GUIContent("Screenshot");
-            window.minSize = new Vector2(325f, 150f);
+            window.minSize = new Vector2(400f, 330f);
             window.Show();
         }
 
