@@ -9,7 +9,7 @@ namespace TalusKit.Editor
 {
     public static class DeleteEmptyFolders
     {
-        [MenuItem("TalusKit/Utility/Delete Empty Folders", false, 200)]
+        [MenuItem("TalusKit/Utility/Delete Empty Folders", false, 0)]
         public static void Go()
         {
             string[] directories = Directory.GetDirectories("Assets", "*.*", SearchOption.AllDirectories);

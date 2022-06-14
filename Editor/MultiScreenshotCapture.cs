@@ -340,7 +340,7 @@ namespace TalusKit.Editor
             EditorGUILayout.EndScrollView();
         }
 
-        [MenuItem("TalusKit/Utility/Multi Screenshot Capture", false, 203)]
+        [MenuItem("TalusKit/Utility/Multi Screenshot Capture", false, 201)]
         private static void Init()
         {
             MultiScreenshotCapture window = GetWindow<MultiScreenshotCapture>();

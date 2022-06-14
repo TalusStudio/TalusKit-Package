@@ -61,7 +61,7 @@ namespace TalusKit.Editor
 
 #region Create Instance
 
-        [MenuItem("TalusKit/Utility/Editor Physics", false, 201)]
+        [MenuItem("TalusKit/Utility/Editor Physics", false, 202)]
         private static void CreateInstance()
         {
             var window = CreateWindow<EditorPhysics>();

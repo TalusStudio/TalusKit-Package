@@ -10,7 +10,7 @@ namespace TalusKit.Editor
         [SerializeField] private bool _ApplyRotation = true;
         [SerializeField] private bool _ApplyScale = true;
 
-        [MenuItem("TalusKit/Utility/Replace With Prefab %q", false, 202)]
+        [MenuItem("TalusKit/Utility/Replace With Prefab %q", false, 200)]
         private static void CreateReplaceWithPrefab()
         {
             var window = GetWindow<ReplaceWithPrefab>();
