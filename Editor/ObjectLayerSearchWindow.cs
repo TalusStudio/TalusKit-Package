@@ -47,7 +47,7 @@ namespace TalusKit.Editor
                 {
                     _LayerSearchResult.Clear();
 
-                    foreach (GameObject result in FindObjectsOfType<GameObject>())
+                    foreach (GameObject result in FindObjectsOfType<GameObject>(true))
                     {
                         if (_SearchedLayers != (_SearchedLayers | (1 << result.layer))) { continue; }
                         if (result.CompareTag("EditorOnly")) { continue; }
