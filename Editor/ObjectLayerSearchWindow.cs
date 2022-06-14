@@ -8,6 +8,8 @@ namespace TalusKit.Editor
 {
     internal class ObjectLayerSearchWindow : EditorWindow
     {
+        private const string _IgnoreTag = "EditorOnly";
+
         private readonly List<GameObject> _LayerSearchResult = new List<GameObject>();
         private LayerMask _SearchedLayers;
         private Vector2 _SearchResultScroll = Vector2.zero;
@@ -42,6 +44,10 @@ namespace TalusKit.Editor
             {
                 GUILayout.FlexibleSpace();
 
+                GUI.enabled = false;
+                GUILayout.Label($"Ignored Tag: {_IgnoreTag}");
+                GUI.enabled = true;
+
                 GUI.backgroundColor = Color.green;
                 if (GUILayout.Button("Search", GUILayout.MinHeight(50)))
                 {
@@ -50,7 +56,7 @@ namespace TalusKit.Editor
                     foreach (GameObject result in FindObjectsOfType<GameObject>(true))
                     {
                         if (_SearchedLayers != (_SearchedLayers | (1 << result.layer))) { continue; }
-                        if (result.CompareTag("EditorOnly")) { continue; }
+                        if (result.CompareTag(_IgnoreTag)) { continue; }
 
                         _LayerSearchResult.Add(result);
                     }
