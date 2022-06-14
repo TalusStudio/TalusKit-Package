@@ -1,5 +1,4 @@
-# TalusKit Package
-
+# [![](https://img.shields.io/github/package-json/displayName/talusstudio/taluskit-package?label=Package%3A)](https://github.com/TalusStudio/TalusKit-Package)
 - Utility tools from 3rd party scripts.
 
 # 💿 Installation
