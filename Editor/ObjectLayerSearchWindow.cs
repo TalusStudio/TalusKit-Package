@@ -17,6 +17,7 @@ namespace TalusKit.Editor
         {
             var window = GetWindow<ObjectLayerSearchWindow>();
             window.titleContent = new GUIContent("Object Layer Searcher");
+            window.minSize = new Vector2(300, 300);
             window.Show();
         }
 
