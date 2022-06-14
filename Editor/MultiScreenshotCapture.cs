@@ -107,7 +107,7 @@ namespace TalusKit.Editor
         private readonly List<CustomResolution> queuedScreenshots = new List<CustomResolution>();
         private bool allowTransparentBackground;
         private bool captureOverlayUI = true;
-        private bool currentResolutionEnabled = true;
+        private bool currentResolutionEnabled = false;
         private float prevTimeScale;
         private float resolutionMultiplier = 1f;
         //private static EditorWindow GameView { get { return (EditorWindow) GetType( "GameView" ).CallMethod( "GetMainGameView" ); } }
