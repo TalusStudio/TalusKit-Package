@@ -287,15 +287,14 @@ namespace TalusKit.Editor
                 EditorGUI.indentLevel--;
             }
 
-            GUILayout.Space(32);
+            GUILayout.FlexibleSpace();
 
-            saveDirectory = PathField("Save to:", saveDirectory);
+            saveDirectory = PathField("Save To:", saveDirectory);
 
             EditorGUILayout.Space();
 
             GUI.enabled = queuedScreenshots.Count == 0 && resolutionMultiplier > 0f;
 
-            GUILayout.FlexibleSpace();
             GUI.backgroundColor = Color.green;
             if (GUILayout.Button("Capture Screenshots", GUILayout.MinHeight(50)))
             {
