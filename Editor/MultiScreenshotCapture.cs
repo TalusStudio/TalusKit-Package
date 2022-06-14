@@ -189,12 +189,17 @@ namespace TalusKit.Editor
                 SaveSettings();
             }
 
+            Color currentColor = GUI.backgroundColor;
+            GUI.backgroundColor = Color.yellow;
             if (GUILayout.Button("Load"))
             {
                 LoadSettings();
             }
+            GUI.backgroundColor = currentColor;
 
             GUILayout.EndHorizontal();
+
+            GUILayout.Space(16);
 
             GUILayout.BeginHorizontal();
 
@@ -282,7 +287,7 @@ namespace TalusKit.Editor
                 EditorGUI.indentLevel--;
             }
 
-            EditorGUILayout.Space();
+            GUILayout.Space(32);
 
             saveDirectory = PathField("Save to:", saveDirectory);
 
