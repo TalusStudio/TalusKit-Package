@@ -34,21 +34,25 @@ namespace TalusKit.Editor
             {
                 Tickrate = (int)EditorGUILayout.Slider("Tickrate", Tickrate, 8, 64);
                 Speed = EditorGUILayout.Slider("Speed", Speed, 0.001f, 2f);
+                GUILayout.Space(8);
                 Gravity = EditorGUILayout.Vector3Field("Gravity", Gravity);
             }
 
             EditorGUILayout.EndVertical();
 
+            GUILayout.FlexibleSpace();
+            GUI.backgroundColor = Color.green;
+
             if (!_IsSimulating)
             {
-                if (GUILayout.Button("Simulate"))
+                if (GUILayout.Button("Simulate", GUILayout.MinHeight(50)))
                 {
                     StartSimulation();
                 }
             }
             else
             {
-                if (GUILayout.Button("Stop Simulate"))
+                if (GUILayout.Button("Stop Simulate", GUILayout.MinHeight(50)))
                 {
                     StopSimulation();
                 }
@@ -60,7 +64,10 @@ namespace TalusKit.Editor
         [MenuItem("TalusKit/Utility/Editor Physics", false, 201)]
         private static void CreateInstance()
         {
-            CreateWindow<EditorPhysics>().Show();
+            var window = CreateWindow<EditorPhysics>();
+            window.titleContent = new GUIContent("Editor Physics");
+            window.minSize = new Vector2(400, 150);
+            window.Show();
         }
 
 #endregion
