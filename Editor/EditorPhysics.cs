@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace TalusKit.Editor
 {
-    public class EditorPhysics : EditorWindow
+    internal class EditorPhysics : EditorWindow
     {
         private void OnEnable()
         {

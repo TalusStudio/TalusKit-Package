@@ -4,24 +4,38 @@ using UnityEngine;
 
 namespace TalusKit.Editor
 {
-    public class ReplaceWithPrefab : EditorWindow
+    internal class ReplaceWithPrefab : EditorWindow
     {
-        [SerializeField]
-        private GameObject _Prefab;
+        [SerializeField] private GameObject _Prefab;
+        [SerializeField] private bool _ApplyRotation = true;
+        [SerializeField] private bool _ApplyScale = true;
 
-        [SerializeField]
-        private bool _ReplaceRotation = true;
-
-        [SerializeField]
-        private bool _ReplaceScale = true;
+        [MenuItem("TalusKit/Utility/Replace With Prefab %q", false, 202)]
+        private static void CreateReplaceWithPrefab()
+        {
+            var window = GetWindow<ReplaceWithPrefab>();
+            window.titleContent = new GUIContent("Replace with Prefab");
+            window.minSize = new Vector2(370, 150);
+            window.Show();
+        }
 
         private void OnGUI()
         {
-            _Prefab = (GameObject) EditorGUILayout.ObjectField("Prefab", _Prefab, typeof(GameObject), false);
-            _ReplaceRotation = EditorGUILayout.Toggle("Replace Rotation", _ReplaceRotation);
-            _ReplaceScale = EditorGUILayout.Toggle("Replace Scale", _ReplaceScale);
+            GUILayout.BeginVertical();
+            GUILayout.Space(8);
 
-            if (GUILayout.Button("Replace"))
+            _Prefab = (GameObject) EditorGUILayout.ObjectField("Prefab", _Prefab, typeof(GameObject), false);
+            _ApplyRotation = EditorGUILayout.Toggle("Apply Rotation", _ApplyRotation);
+            _ApplyScale = EditorGUILayout.Toggle("Apply Scale", _ApplyScale);
+
+            GUILayout.FlexibleSpace();
+
+            GUI.enabled = false;
+            EditorGUILayout.LabelField("Selection count: " + Selection.objects.Length);
+            GUI.enabled = true;
+
+            GUI.backgroundColor = Color.green;
+            if (GUILayout.Button("Replace", GUILayout.MinHeight(50)))
             {
                 GameObject[] selection = Selection.gameObjects;
 
@@ -50,12 +64,12 @@ namespace TalusKit.Editor
                     newObject.transform.parent = selected.transform.parent;
                     newObject.transform.localPosition = selected.transform.localPosition;
 
-                    if (_ReplaceRotation)
+                    if (_ApplyRotation)
                     {
                         newObject.transform.localRotation = selected.transform.localRotation;
                     }
 
-                    if (_ReplaceScale)
+                    if (_ApplyScale)
                     {
                         newObject.transform.localScale = selected.transform.localScale;
                     }
@@ -65,16 +79,7 @@ namespace TalusKit.Editor
                 }
             }
 
-            GUI.enabled = false;
-            EditorGUILayout.LabelField("Selection count: " + Selection.objects.Length);
-        }
-
-        [MenuItem("TalusKit/Utility/Replace With Prefab %q", false, 202)]
-        private static void CreateReplaceWithPrefab()
-        {
-            var window = GetWindow<ReplaceWithPrefab>();
-            window.titleContent = new GUIContent("Replace with Prefab");
-            window.Show();
+            GUILayout.EndVertical();
         }
     }
 }

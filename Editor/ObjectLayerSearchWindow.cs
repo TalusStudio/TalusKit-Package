@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TalusKit.Editor
 {
-    public class ObjectLayerSearchWindow : EditorWindow
+    internal class ObjectLayerSearchWindow : EditorWindow
     {
         private readonly List<GameObject> _LayerSearchResult = new List<GameObject>();
         private LayerMask _SearchedLayers;
