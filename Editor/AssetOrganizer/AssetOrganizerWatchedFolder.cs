@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 namespace TalusKit.Editor.AssetOrganizer
 {
     [CreateAssetMenu(menuName = "_OTHERS/Asset Organizer/Watched Folder")]
-    public class AssetOrganizerWatchedFolder : ScriptableObject
+    internal class AssetOrganizerWatchedFolder : ScriptableObject
     {
         [FolderPath(UseBackslashes = true)]
         [ValueColor(nameof(PathStatusColor))]
