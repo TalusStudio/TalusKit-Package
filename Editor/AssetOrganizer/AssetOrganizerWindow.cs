@@ -36,7 +36,7 @@ namespace TalusKit.Editor.AssetOrganizer
         [AssetList(AutoPopulate = true)]
         public List<AssetOrganizationConfig> AssetOrganizationConfigs = new List<AssetOrganizationConfig>();
 
-        [MenuItem("TalusKit/Utility/Asset Organizer", priority = -1)]
+        [MenuItem("TalusKit/Asset Organizer", priority = -1)]
         private static void Open()
         {
             var window = GetWindow<AssetOrganizerWindow>("Asset Organizer");
