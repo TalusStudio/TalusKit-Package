@@ -38,7 +38,7 @@ namespace TalusKit.Editor.AssetOrganizer
         private static void Open()
         {
             var window = GetWindow<AssetOrganizerWindow>("Asset Organizer");
-            window.minSize = new Vector2(400, 400);
+            window.minSize = new Vector2(440, 480);
         }
 
         public void Organize()
