@@ -14,6 +14,8 @@ namespace TalusKit.Editor.AssetOrganizer
 {
     internal class AssetOrganizerWindow : OdinEditorWindow
     {
+        private const string _ExcludedFolder = "Template_Persistent";
+
         public enum Tab
         {
             Organization,
@@ -51,6 +53,7 @@ namespace TalusKit.Editor.AssetOrganizer
 
                 var filePaths = Directory.GetFiles(AbsolutePath(folder.Path), "*", searchOption)
                     .Where(path => Path.GetExtension(path) != ".meta")
+                    .Where(path => !path.Contains(_ExcludedFolder))
                     .Select(RelativePath);
 
                 foreach (var filePath in filePaths)
