@@ -12,7 +12,7 @@ using Sirenix.Utilities;
 
 namespace TalusKit.Editor.AssetOrganizer
 {
-    public class AssetOrganizerWindow : OdinEditorWindow
+    internal class AssetOrganizerWindow : OdinEditorWindow
     {
         public enum Tab
         {
@@ -27,11 +27,11 @@ namespace TalusKit.Editor.AssetOrganizer
 
         [PropertySpace(0f, 11f)]
         [ShowIf("@CurrentTab == Tab.Organization")]
-        [TableList(NumberOfItemsPerPage = 10, ShowPaging = true)]
+        [AssetList(AutoPopulate = true)]
         public List<AssetOrganizerWatchedFolder> WatchedFolders = new List<AssetOrganizerWatchedFolder>();
 
         [ShowIf("@CurrentTab == Tab.Organization")]
-        [TableList(NumberOfItemsPerPage = 10, ShowPaging = true)]
+        [AssetList(AutoPopulate = true)]
         public List<AssetOrganizationConfig> AssetOrganizationConfigs = new List<AssetOrganizationConfig>();
 
         [MenuItem("TalusKit/Utility/Asset Organizer", priority = -1)]

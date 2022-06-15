@@ -10,7 +10,7 @@ using Sirenix.Utilities;
 namespace TalusKit.Editor.AssetOrganizer
 {
     [CreateAssetMenu(menuName = "_OTHERS/Asset Organizer/Config")]
-    public class AssetOrganizationConfig : ScriptableObject
+    internal class AssetOrganizationConfig : ScriptableObject
     {
         public enum FilterType
         {
