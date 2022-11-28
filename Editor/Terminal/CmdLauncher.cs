@@ -10,8 +10,9 @@ namespace TalusKit.Editor.Terminal
         {
             var processInfo = new ProcessStartInfo("cmd.exe")
             {
-                WorkingDirectory = targetFolder,
+                WorkingDirectory = targetFolder
             };
+            
             return Process.Start(processInfo);
         }
     }

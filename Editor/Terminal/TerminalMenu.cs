@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using System.Reflection;
+
+using UnityEngine;
 using UnityEditor;
-using System.IO;
 
 namespace TalusKit.Editor.Terminal
 {
@@ -23,20 +25,17 @@ namespace TalusKit.Editor.Terminal
 
         private static string GetSelectedPathOrFallback()
         {
-            string path = "Assets";
+            MethodInfo activeFolderPath = typeof(ProjectWindowUtil).GetMethod(
+                "TryGetActiveFolderPath", 
+                BindingFlags.Static | BindingFlags.NonPublic
+            );
 
-            foreach (Object obj in Selection.GetFiltered(typeof(Object), SelectionMode.Assets))
-            {
-                path = AssetDatabase.GetAssetPath(obj);
-                if (string.IsNullOrEmpty(path) || !File.Exists(path))
-                {
-                    continue;
-                }
+            object[] args = { null };
+            bool found = (bool) activeFolderPath.Invoke(null, args);
+            string path = (string) args[0];
+            path = path.Trim('/');
 
-                path = Path.GetDirectoryName(path);
-                break;
-            }
-            return path;
+            return found ? path : GetProjectPath();
         }
 
         private static TerminalLauncher CreateLauncher(TerminalType terminalType)

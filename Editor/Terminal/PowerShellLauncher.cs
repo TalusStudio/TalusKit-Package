@@ -10,8 +10,9 @@ namespace TalusKit.Editor.Terminal
         {
             var processInfo = new ProcessStartInfo("PowerShell.exe")
             {
-                WorkingDirectory = targetFolder,
+                WorkingDirectory = targetFolder
             };
+            
             return Process.Start(processInfo);
         }
     }

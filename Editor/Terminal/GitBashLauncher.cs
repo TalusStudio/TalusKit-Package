@@ -1,6 +1,7 @@
-﻿using Microsoft.Win32;
-using System.IO;
+﻿using System.IO;
 using System.Diagnostics;
+
+using Microsoft.Win32;
 
 namespace TalusKit.Editor.Terminal
 {
@@ -18,8 +19,7 @@ namespace TalusKit.Editor.Terminal
         private static string GetGitInstallPath()
         {
             const string key = "HKEY_LOCAL_MACHINE\\SOFTWARE\\GitForWindows";
-            string path = (string)Registry.GetValue(key, "InstallPath", "");
-            return path;
+            return (string) Registry.GetValue(key, "InstallPath", "");
         }
     }
 }

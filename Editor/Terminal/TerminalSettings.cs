@@ -32,7 +32,7 @@ namespace TalusKit.Editor.Terminal
         }
     }
 
-    enum TerminalType
+    internal enum TerminalType
     {
         Auto,
         WindowsTerminal,
