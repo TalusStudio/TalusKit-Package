@@ -11,7 +11,7 @@ namespace TalusKit.Editor.Terminal
             string command = @"open -a Terminal " + targetFolder;
             command = command.Replace(@"\", "/");
 
-            var startInfo = new ProcessStartInfo()
+            var startInfo = new ProcessStartInfo
             {
                 FileName = "bash",
                 UseShellExecute = false,

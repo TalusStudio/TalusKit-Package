@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Diagnostics;
 
 namespace TalusKit.Editor.Terminal
 {
@@ -17,18 +18,14 @@ namespace TalusKit.Editor.Terminal
         private static string GetFullPath(string fileName)
         {
             if (File.Exists(fileName))
+            {
                 return Path.GetFullPath(fileName);
+            }
 
             string values = Environment.GetEnvironmentVariable("PATH");
-            foreach (string path in values.Split(Path.PathSeparator))
-            {
-                string fullPath = Path.Combine(path, fileName);
-                if (File.Exists(fullPath))
-                {
-                    return fullPath;
-                }
-            }
-            return null;
+            return values.Split(Path.PathSeparator)
+                .Select(path => Path.Combine(path, fileName))
+                .FirstOrDefault(fullPath => File.Exists(fullPath));
         }
     }
 }

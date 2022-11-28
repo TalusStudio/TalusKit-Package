@@ -1,6 +1,6 @@
 {
     "name": "TalusKit.Editor",
-    "rootNamespace": "",
+    "rootNamespace": "TalusKit.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"

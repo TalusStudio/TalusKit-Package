@@ -1,6 +1,7 @@
-﻿using UnityEditor;
-using System;
+﻿using System;
 using System.Linq;
+
+using UnityEditor;
 using UnityEngine;
 
 namespace TalusKit.Editor.Terminal
@@ -15,12 +16,7 @@ namespace TalusKit.Editor.Terminal
 
         public TerminalSettingsProvider() : base("Talus Studio/Terminal Launcher", SettingsScope.User)
         { }
-
-        public override bool HasSearchInterest(string searchContext)
-        {
-            return base.HasSearchInterest(searchContext);
-        }
-
+        
         public override void OnGUI(string searchContext)
         {
             GUILayout.Space(8);
@@ -30,26 +26,19 @@ namespace TalusKit.Editor.Terminal
 
         private readonly string[] _TerminalTypeLabels = Enum.GetValues(typeof(TerminalType))
             .Cast<TerminalType>()
-            .OrderBy(t => (int)t)
-            .Select(t =>
+            .OrderBy(terminal => (int)terminal)
+            .Select(terminal =>
             {
-                switch (t)
+                return terminal switch
                 {
-                    case TerminalType.Auto:
-                        return "Auto";
-                    case TerminalType.WindowsTerminal:
-                        return "Windows Terminal";
-                    case TerminalType.PowerShell:
-                        return "PowerShell";
-                    case TerminalType.Cmd:
-                        return "Command Prompt";
-                    case TerminalType.GitBash:
-                        return "Git Bash";
-                    case TerminalType.MacTerminal:
-                        return "MacTerminal";
-                    default:
-                        throw new NotImplementedException($"Case for {t} is not implemented.");
-                }
+                    TerminalType.Auto => "Auto",
+                    TerminalType.WindowsTerminal => "Windows Terminal",
+                    TerminalType.PowerShell => "PowerShell",
+                    TerminalType.Cmd => "Command Prompt",
+                    TerminalType.GitBash => "Git Bash",
+                    TerminalType.MacTerminal => "MacTerminal",
+                    _ => throw new NotImplementedException($"Case for {terminal} is not implemented.")
+                };
             })
             .ToArray();
     }
