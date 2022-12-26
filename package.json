@@ -1,6 +1,6 @@
 {
   "name": "com.talus.taluskit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "displayName": "TalusKit",
   "description": "Supplement for Talus Framework",
   "unity": "2020.3",
@@ -15,5 +15,6 @@
     "name": "Talus Studio",
     "email": "info@talusstudio.com",
     "url": "http://www.talusstudio.com"
-  }
+  },
+  "repository": "github:talusstudio/TalusKit-Package"
 }
