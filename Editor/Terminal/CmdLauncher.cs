@@ -12,7 +12,7 @@ namespace TalusKit.Editor.Terminal
             {
                 WorkingDirectory = targetFolder
             };
-            
+
             return Process.Start(processInfo);
         }
     }
