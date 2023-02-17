@@ -4,16 +4,18 @@ namespace TalusKit.Editor.Terminal
 {
     internal class CmdLauncher : TerminalLauncher
     {
-        internal override bool HasExecutable => ExistsOnPath("cmd.exe");
+        internal override string LauncherName => "cmd.exe";
 
-        internal override Process Launch(string targetFolder)
+        internal override void Launch(string targetFolder)
         {
-            var processInfo = new ProcessStartInfo("cmd.exe")
+            base.Launch(targetFolder);
+
+            var processInfo = new ProcessStartInfo(LauncherName)
             {
                 WorkingDirectory = targetFolder
             };
 
-            return Process.Start(processInfo);
+            Process.Start(processInfo);
         }
     }
 }

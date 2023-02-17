@@ -4,16 +4,18 @@ namespace TalusKit.Editor.Terminal
 {
     internal class PowerShellLauncher : TerminalLauncher
     {
-        internal override bool HasExecutable => ExistsOnPath("PowerShell.exe");
+        internal override string LauncherName => "PowerShell.exe";
 
-        internal override Process Launch(string targetFolder)
+        internal override void Launch(string targetFolder)
         {
-            var processInfo = new ProcessStartInfo("PowerShell.exe")
+            base.Launch(targetFolder);
+
+            var processInfo = new ProcessStartInfo(LauncherName)
             {
                 WorkingDirectory = targetFolder
             };
-            
-            return Process.Start(processInfo);
+
+            Process.Start(processInfo);
         }
     }
 }

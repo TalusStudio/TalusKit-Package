@@ -4,10 +4,12 @@ namespace TalusKit.Editor.Terminal
 {
     internal class MacTerminalLauncher : TerminalLauncher
     {
-        internal override bool HasExecutable => ExistsOnPath("/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal");
+        internal override string LauncherName => "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal";
 
-        internal override Process Launch(string targetFolder)
+        internal override void Launch(string targetFolder)
         {
+            base.Launch(targetFolder);
+
             string command = @"open -a Terminal " + targetFolder;
             command = command.Replace(@"\", "/");
 
@@ -22,7 +24,7 @@ namespace TalusKit.Editor.Terminal
                 Arguments = " -c \"" + command + " \""
             };
 
-            return Process.Start(startInfo);
+            Process.Start(startInfo);
         }
     }
 }

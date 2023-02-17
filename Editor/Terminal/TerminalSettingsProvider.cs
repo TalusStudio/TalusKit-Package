@@ -34,7 +34,7 @@ namespace TalusKit.Editor.Terminal
                     TerminalType.Auto => "Auto",
                     TerminalType.WindowsTerminal => "Windows Terminal",
                     TerminalType.PowerShell => "PowerShell",
-                    TerminalType.Cmd => "Command Prompt",
+                    TerminalType.Cmd => "Cmd",
                     TerminalType.GitBash => "Git Bash",
                     TerminalType.MacTerminal => "MacTerminal",
                     _ => throw new NotImplementedException($"Case for {terminal} is not implemented.")

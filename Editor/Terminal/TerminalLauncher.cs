@@ -7,8 +7,16 @@ namespace TalusKit.Editor.Terminal
 {
     internal abstract class TerminalLauncher
     {
-        internal abstract bool HasExecutable { get; }
-        internal abstract Process Launch(string targetFolder);
+        internal virtual bool HasExecutable => ExistsOnPath(LauncherName);
+        internal abstract string LauncherName { get; }
+
+        internal virtual void Launch(string targetFolder)
+        {
+            if (!HasExecutable)
+            {
+                throw new System.Exception("Terminal could not found!");
+            }
+        }
 
         protected bool ExistsOnPath(string fileName)
         {

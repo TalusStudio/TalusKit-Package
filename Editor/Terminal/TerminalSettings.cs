@@ -38,7 +38,7 @@ namespace TalusKit.Editor.Terminal
         WindowsTerminal,
         PowerShell,
         Cmd,
-        GitBash,
-        MacTerminal
+        MacTerminal,
+        GitBash
     }
 }
