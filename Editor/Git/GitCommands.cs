@@ -9,7 +9,7 @@ namespace TalusKit.Editor.Git
         [MenuItem("TalusKit/Git/Update Submodules", false, 0)]
         private static void Run()
         {
-            Executor.Execute("git submodule update --origin");
+            Executor.Execute("git submodule update --remote");
         }
     }
 }
