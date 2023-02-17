@@ -26,7 +26,7 @@ namespace TalusKit.Editor.Terminal
         private static string GetSelectedPathOrFallback()
         {
             MethodInfo activeFolderPath = typeof(ProjectWindowUtil).GetMethod(
-                "TryGetActiveFolderPath", 
+                "TryGetActiveFolderPath",
                 BindingFlags.Static | BindingFlags.NonPublic
             );
 

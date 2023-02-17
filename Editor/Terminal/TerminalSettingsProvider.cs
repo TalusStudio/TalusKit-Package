@@ -16,7 +16,7 @@ namespace TalusKit.Editor.Terminal
 
         public TerminalSettingsProvider() : base("Talus Studio/Terminal Launcher", SettingsScope.User)
         { }
-        
+
         public override void OnGUI(string searchContext)
         {
             GUILayout.Space(8);
