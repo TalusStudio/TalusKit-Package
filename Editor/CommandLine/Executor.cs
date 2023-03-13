@@ -1,8 +1,9 @@
 using System.IO;
 using System.Diagnostics;
 
-using Debug = UnityEngine.Debug;
 using TalusKit.Editor.Terminal;
+
+using Debug = UnityEngine.Debug;
 
 namespace TalusKit.Editor.CommandLine
 {

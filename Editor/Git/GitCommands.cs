@@ -10,6 +10,9 @@ namespace TalusKit.Editor.Git
         private static void Run()
         {
             Executor.Execute("git submodule update --remote");
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
         }
     }
 }
